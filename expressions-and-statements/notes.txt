@@ -1,0 +1,61 @@
+lvalue  =>
+  - variables left of operator
+  - object the variable name refers to
+
+rvalue  =>
+  - variables right of the operator
+  - value of data placed in variable
+
+expression   =>  c * 9 / 5 + 32
+statement    =>  f = c * 9 / 5 + 32;
+  - declaration  =>  int apples;
+  - empty        =>  ;
+  - compount     =>  { s1; s2; s3 }
+
+===== if statements =====
+
+if (expression) statement else statement
+
+if (expression) statement
+
+if (expression) statement else if (expression) statement
+
+if (expression)
+{
+  statement
+}
+else
+{
+  statement
+}
+
+===== iteration statements =====
+
+while (expression)
+{
+  statement
+}
+
+do
+{
+  statement
+}
+while (expression)
+
+for (first_exp; conditional_exp; loop_exp)
+{
+  statement
+}
+
+===== loop jumping =====
+
+continue;  =>  stop current iteration, but allow subsequent to execute
+break;     =>  immediately stop iteration and execute line following loop
+
+===== switch statement =====
+
+switch (expression)
+{
+  case constant_expression: statement break;
+  [optional]default: statement
+}
