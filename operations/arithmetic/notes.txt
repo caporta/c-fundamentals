@@ -1,0 +1,7 @@
++ add
+- subtract
+* multiply
+/ divide
+% modulo
+
+- All are left associated

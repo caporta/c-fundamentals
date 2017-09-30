@@ -1,0 +1,7 @@
+&&  => and
+||  => or
+
+- left associative
+- short circuit eval
+- && precedence higher than ||
+  - 0 || 1 && (0 || 1) => 1 (true)

@@ -1,0 +1,6 @@
+==== highest precedence ====
+
+!   => logical negation
+~   => bitwise complement
+++  => increment (*pre*/post)
+--  => decrement (*pre*/post)

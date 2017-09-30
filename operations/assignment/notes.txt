@@ -1,0 +1,11 @@
+=    => simple assignment
++=   => add
+-=   => subtract
+*=   => multiply
+/=   => divide
+%=   => modulo
+&=   => bitwise and
+|=   => bitwise or
+^=   => bitwise xor
+<<=  => bitwise left shift
+>>=  => bitwise right shift

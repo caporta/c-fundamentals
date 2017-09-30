@@ -1,0 +1,10 @@
+<   => less than
+>   => greater than
+<=  => less than or equal to
+>=  => greater than or equal to
+1   => true
+0   => false
+!0  => true
+
+- no boolean operator!
+- lower precedence than all arithmetic

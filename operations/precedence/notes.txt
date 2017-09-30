@@ -1,0 +1,25 @@
+===== Operator =====|===== Operation =====|===== Associativity =====
+
+! ~ ++ -- -          unary                                        <-
+
+* / %                multiplicative        ->
+
++ -                  additive              ->
+
+<< >>                bitwise shift         ->
+
+< > <= >=            relational            ->
+
+== !==               equality              ->
+
+&                    bitwise AND           ->
+
+^                    bitwise XOR           ->
+
+|                    bitwise OR            ->
+
+&&                   logical AND           ->
+
+||                   logical OR            ->
+
+= *= <<=...          assignment                                   <-
