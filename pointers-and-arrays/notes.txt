@@ -1,0 +1,58 @@
+===== POINTERS AND ADDRESSES =====
+
+
+- Pointers store addresses of variables
+- Pointers are variables themselves
+
+char * ptr_to_char;
+
+void * ptr_to_unknown;
+
+// instantiate a null pointer
+int * ptr_to_nothing = 0;
+
+&          => "address of" operator
+type *     => "pointer" operator
+*var_name  => "dereference" operator
+
+  - int apples = 5;
+    int * p = &apples;     // p is a pointer to int initialized with the value of apples
+
+- Compilers often don't know if pointers are pointing to a valid location
+- C does not offer runtime facilities to check ^
+
+    int oranges = *p + 6;  // the contents of p + 6
+
+  - int * p;               // forgot to initialize
+    int oranges = *p + 6;  // wat? will not fail!
+
+  - int * p = 0;           // better to instantiate as null pointer
+    int oranges = *p + 6;  // will blow up!
+
+  - int * p = 0;
+    if (p) { int oranges = *p + 6; }  // safe!
+
+
+===== ARRAYS =====
+
+
+int values[5];                => contiguous, values unclear, but ok
+
+int values[] = { 1, 2 };      => { 1, 2 }
+
+int values[5] = { 1, 2, 3 };  => { 1, 2, 3, 0, 0 }
+
+char buffer[1024] = { 0 };    => { 0, 0, ..., 0, 0 } // size constant
+
+
+===== POINTERS AND ARRAYS =====
+
+
+int values[5];            => { ?, ?, ?, ?, ? }
+values[0] = 1;            => { 1, ?, ?, ?, ? }
+values[4] = values[0];    => { 1, ?, ?, ?, 1 }
+
+int * ptr = values;       => points to first element
+int * last = &values[4];  => points to last element
+++ptr;                    => points to next element
+ptr += 3;                 => points to last element
