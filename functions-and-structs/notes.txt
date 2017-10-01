@@ -1,0 +1,61 @@
+===== FUNCTIONS =====
+
+
+- often "inlined" by compiler
+  - i.e. compiler may duplicate code for perf benefit
+- **pass by value**
+
+// "function definition"
+int celsius_to_fahrenheit(int c)
+{
+  return c * 9/5 + 32;
+}
+
+// "function declaration"
+int celsius_to_fahrenheit(int c);
+
+// pointer to function
+int (* convert)(int from) = celsius_to_fahrenheit;
+
+// typedef for pointer to function
+typedef int (*converter)(int from);
+converter convert = celsius_to_farenheit;
+printf("%d\n", convert(34));
+
+
+===== STRUCTURES (a.k.a. records) =====
+
+- structs are stored in a seperate namespace, so require type ref
+
+struct color
+{
+  float red;
+  float green;
+  float blue;
+  float alpha;
+}
+
+color my_color = { ... };         => will not work!
+
+struct color my_color = { ... };  => works! (must provide type)
+
+UNLESS...
+
+typedef struct
+{
+  ...
+} color;
+
+color my_color = { ... };         => works now!
+
+color c = { 1, 0, 0, 1 };         => c is red
+c.green = c.red;                  => c is now yellow
+
+color colors[5];                  => array of 5 colors
+
+color * first = colors;
+color * next = first + 1;
+
+next->alpha = 0.5;                => "pointer member selection" operator
+**equivalent to:
+(*next).alpha = 0.5;
